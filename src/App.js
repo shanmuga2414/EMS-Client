@@ -10,7 +10,6 @@ import Blog from "./components/Blog";
 import Error from "./components/Error";
 import Logout from "./components/Logout";
 import WorkSingle from "./components/WorkSingle";
-import PDFPreview from "./components/PDFPreview";
 //Services
 import auth from "./services/authService";
 
@@ -28,13 +27,12 @@ class App extends Component {
         <div className="container">
           <Menu user={user} />
           <Switch>
-            <Redirect exact from="/" to="/signin" />
+            <Redirect exact from="/" to="/home" />
             <Route path="/signin" component={Signin} />
             <Route path="/signup" component={Signup} />
             <Route path="/logout" component={Logout} />
             <Route path="/home" component={Home} />
             <Route path="/work/:id" component={WorkSingle} />
-            <Route path="/pdf" component={PDFPreview} />
             <Route
               path="/blog"
               render={(props) => <Blog {...props} user={user} />}
