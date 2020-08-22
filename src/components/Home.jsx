@@ -9,6 +9,7 @@ class Home extends Component {
       <React.Fragment>
         {/* <Heading title="Welcome" desc="Welcome to nirmal.info" /> */}
         <div className="container">
+
           <div className="row">
             <div className="col-md-4">
               <Profile />
